@@ -1,20 +1,17 @@
-import { DOMSelectors } from "./DOM";
-import { genres } from "./genre";
+//import { DOMSelectors } from "./DOM";
+//import { genres } from "./genre";
 
-//const key = "YOURKEYHERE";
+const key = "https://superheroapi.com/api/10223243144381012";
 
-fetch("https://superheroapi.com/api/access-token/search/batman")
-  .then((response) => {
-    if (response.ok) {
-      return response.json();
-    } else {
-      throw new Error("NETWORK RESPONSE NOT OK");
-    }
-  })
-  .then(function (data) {
-    console.log(data);
-    displayCocktail(data);
-  })
-  .catch((error) => {
-    console.error("FETCH ERROR:", error);
-  });
+const query = async function () {
+  try {
+    const response = await fetch(
+      "https://superheroapi.com/api/10223243144381012/superman"
+    );
+    const data = await response.json();
+    console.log(date);
+  } catch (error) {
+    console.log(error);
+    alert("Hey Something Went Wrong");
+  }
+};
