@@ -6,7 +6,7 @@ const key = "https://superheroapi.com/api/10223243144381012";
 const query = async function () {
   try {
     const response = await fetch(
-      "https://superheroapi.com/api/10223243144381012/superman"
+      "https://superheroapi.com/api/10223243144381012/search/superman"
     );
     const data = await response.json();
     console.log(date);
@@ -15,3 +15,4 @@ const query = async function () {
     alert("Hey Something Went Wrong");
   }
 };
+query();
