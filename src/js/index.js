@@ -9,7 +9,7 @@ const query = async function () {
       `https://api.thecatapi.com/v1/images/search?breed_ids={breed-id}`
     );
     const data = await response.json();
-    console.log(data);
+    console.log(data.results);
   } catch (error) {
     console.log(error);
     alert("Hey something went wrong");
