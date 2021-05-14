@@ -6,7 +6,7 @@ const key = "YOURKEYHERE";
 const query = async function () {
   try {
     const response = await fetch(
-      `https://api.thecatapi.com/v1/images/search?breed_ids={breed-id}`
+      `https://superheroapi.com/api/access-token/character-id`
     );
     const data = await response.json();
     console.log(data);
