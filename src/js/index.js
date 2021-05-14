@@ -9,7 +9,7 @@ const query = async function () {
       `https://superheroapi.com/api/access-token/character-id`
     );
     const data = await response.json();
-    console.log(data);
+    console.log(data.results);
   } catch (error) {
     console.log(error);
     alert("Hey something went wrong");
