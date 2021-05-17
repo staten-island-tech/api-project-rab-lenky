@@ -1,4 +1,4 @@
-/* $font-main: "Asap", sans-serif;
+$font-main: "Asap", sans-serif;
 $font-second: "Josefin Slab", serif;
 html,
 body {
@@ -48,7 +48,7 @@ body {
   height: 100%;
   top: 0;
   left: 0;
-  background-image: url("https://image.tmdb.org/t/p/w300/r7vmZjiyZw9rpJMQJdXpjgiCOk9.jpg");
+  //background-image: url("https://rickandmortyapi.com/api/character/${id.image}.jpeg");
   background-position: center;
   z-index: 3;
   transition: all 0.3s;
@@ -114,4 +114,4 @@ body {
 .test {
   color: black;
   font-size: 3rem;
-} */
+}
