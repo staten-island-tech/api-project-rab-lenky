@@ -6,12 +6,14 @@ const query = async function () {
     const response = await fetch("https://rickandmortyapi.com/api/character");
     const data = await response.json();
     data.results.forEach((id) => {
+      console.log(id);
+
       DOMSelectors.grid.insertAdjacentHTML(
         "beforeend",
         `<div class="movie-card">
       <div class="movie-card-front">
         <img
-          src="https://rickandmortyapi.com/api/character/avatar/1.jpeg"
+          src=${id.image}
           alt=""
           class="poster"
         />
