@@ -31,9 +31,8 @@ const query = async function () {
         </div>
 
         <div class="movie-genres">
-          <li class="movie-genre">Sci-Fi</li>
-          <li class="movie-genre">Fantasy</li>
-          <li class="movie-genre">Horror</li>
+          <p class="movie-genre">Origin:</p>
+          <p class="movie-genre">${id.origin.name}</p>
         </div>
       </div>
     </div>`
