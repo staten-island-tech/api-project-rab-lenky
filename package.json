@@ -17,6 +17,5 @@
   },
   "browserslist": [
     "since 2017-06"
-  ],
-  "dependencies": {}
+  ]
 }
