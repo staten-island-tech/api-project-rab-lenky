@@ -1,21 +1,26 @@
-import DOMSelectors from "./DOM";
+import { DOMSelectors } from "./DOM";
 
 const listen = function () {
   DOMSelectors.searchForm.addEventListener("submit", function (e) {
     e.preventDefault();
+    DOMSelectors.grid.innerHTML = "";
     const searchParams = DOMSelectors.searchArea.value;
+
     const searchQuery = async function () {
       try {
+        console.log(searchParams);
         const response = await fetch(
-          "https://rickandmortyapi.com/api/${searchParams}"
+          "https://rickandmortyapi.com/api/character/?name=" + searchParams
         );
-        const data = await response.json();
-        data.results.forEach((id) => {
-          console.log(id);
+        if (response.ok) {
+          const data = await response.json();
 
-          DOMSelectors.grid.insertAdjacentHTML(
-            "beforeend",
-            `<div class="movie-card">
+          data.results.forEach((id) => {
+            console.log(id);
+
+            DOMSelectors.grid.insertAdjacentHTML(
+              "beforeend",
+              `<div class="movie-card">
           <div class="movie-card-front">
             <img
               src=${id.image}
@@ -42,15 +47,17 @@ const listen = function () {
             </div>
           </div>
         </div>`
-          );
-        });
-        console.log(data);
-        searchQuery();
+            );
+          });
+        } else {
+          window.alert("There is no character by this name");
+        }
       } catch (error) {
         console.log(error);
         alert(error);
       }
     };
+    searchQuery();
   });
 };
 

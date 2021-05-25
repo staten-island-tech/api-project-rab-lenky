@@ -17,5 +17,8 @@
   },
   "browserslist": [
     "since 2017-06"
-  ]
+  ],
+  "dependencies": {
+    "DOM": "0.0.3"
+  }
 }
