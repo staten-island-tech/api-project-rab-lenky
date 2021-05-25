@@ -1,4 +1,5 @@
 import { DOMSelectors } from "./DOM";
+import { genres } from "./episodes";
 
 const listen = function () {
   DOMSelectors.searchForm.addEventListener("submit", function (e) {
@@ -16,6 +17,17 @@ const listen = function () {
           const data = await response.json();
 
           data.results.forEach((id) => {
+            let genreArr = [];
+            const addGenre = function () {
+              genres.forEach((element) => {
+                if (id.episode.includes(element.id)) {
+                  genreArr.push(element.name);
+                  return genreArr;
+                }
+              });
+            };
+            addGenre();
+            console.log(genreArr);
             console.log(id);
 
             DOMSelectors.grid.insertAdjacentHTML(
@@ -40,13 +52,13 @@ const listen = function () {
               <p class="release-date">${id.species}</p>
             </div>
     
-            <div class="movie-genres">
-              <li class="movie-genre">Sci-Fi</li>
-              <li class="movie-genre">Fantasy</li>
-              <li class="movie-genre">Horror</li>
+            <div class="movie-genres"
+              <div class="episode-list">Episode(s)
+              ${genreArr}
             </div>
           </div>
-        </div>`
+        </div>
+      </div>`
             );
           });
         } else {
