@@ -1,12 +1,22 @@
 import { DOMSelectors } from "./DOM";
-import { genres } from "./genre";
+import { genres } from "./episodes";
 
 const query = async function () {
   try {
     const response = await fetch("https://rickandmortyapi.com/api/character");
     const data = await response.json();
     data.results.forEach((id) => {
-      console.log(id);
+      let genreArr = [];
+      const addGenre = function () {
+        genres.forEach((element) => {
+          if (id.episode.includes(element.id)) {
+            genreArr.push(element.name);
+            return genreArr;
+          }
+        });
+      };
+      addGenre();
+      console.log(genreArr);
 
       DOMSelectors.grid.insertAdjacentHTML(
         "beforeend",
@@ -30,9 +40,10 @@ const query = async function () {
           <p class="release-date">${id.species}</p>
         </div>
 
-        <div class="movie-genres">
-          <p class="movie-genre">Origin:</p>
-          <p class="movie-genre">${id.origin.name}</p>
+        <div class="movie-genres"
+          <div class="episode-list">Episode(s)
+            ${genreArr}
+          </div>
         </div>
       </div>
     </div>`
