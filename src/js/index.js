@@ -40,9 +40,10 @@ const query = async function () {
           <p class="release-date">${id.species}</p>
         </div>
 
-        <div class="movie-genres">
-          <p class="release-date">Episode(s)</p>
-          <p>${genreArr}</p>
+        <div class="movie-genres"
+          <div class="episode-list">Episode(s)
+            ${genreArr}
+          </div>
         </div>
       </div>
     </div>`
