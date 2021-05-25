@@ -1,14 +1,14 @@
 const genres = [
   {
-    id: 28,
-    name: "Action",
+    id: 1,
+    name: "Earth (C-137)",
   },
   {
-    id: 12,
+    id: 2,
     name: "Adventure",
   },
   {
-    id: 16,
+    id: 3,
     name: "Animation",
   },
   {
