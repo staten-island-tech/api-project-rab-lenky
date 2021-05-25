@@ -1,5 +1,5 @@
 import { DOMSelectors } from "./DOM";
-import { genres } from "./genre";
+import { genres } from "./episodes";
 
 const query = async function () {
   try {
@@ -9,7 +9,7 @@ const query = async function () {
       let genreArr = [];
       const addGenre = function () {
         genres.forEach((element) => {
-          if (id.name.orign.includes(element.id)) {
+          if (id.episode.includes(element.id)) {
             genreArr.push(element.name);
             return genreArr;
           }
@@ -41,7 +41,8 @@ const query = async function () {
         </div>
 
         <div class="movie-genres">
-          ${genreArr}
+          <p class="release-date">Episode(s)</p>
+          <p>${genreArr}</p>
         </div>
       </div>
     </div>`

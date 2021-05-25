@@ -1,4 +1,4 @@
-const genres = [
+/* const genres = [
   {
     id: 1,
     name: "Earth (C-137)",
@@ -119,3 +119,4 @@ const genres = [
   "https://rickandmortyapi.com/api/episode/40",
   "https://rickandmortyapi.com/api/episode/41";
 export { genres };
+*/
