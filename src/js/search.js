@@ -64,6 +64,10 @@ const listen = function () {
         } else {
           window.alert("There is no character by this name");
         }
+        if (searchParams == "") {
+          alert("Please enter character name");
+          return false;
+        }
       } catch (error) {
         console.log(error);
         alert(error);
