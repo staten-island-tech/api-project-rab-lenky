@@ -81,7 +81,7 @@ body {
   font-size: 3.8rem;
 }
 
-.movie-grid {
+.character-grid {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

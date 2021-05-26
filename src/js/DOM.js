@@ -1,5 +1,5 @@
 const DOMSelectors = {
-  grid: document.querySelector(".movie-grid"),
+  grid: document.querySelector(".character-grid"),
   searchForm: document.getElementById("search-form"),
   searchArea: document.getElementById("search-area"),
 };
