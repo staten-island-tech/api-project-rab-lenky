@@ -1,4 +1,4 @@
-import { DOMSelectors } from "./DOM";
+import { DOMSelectors, draw_grid } from "./DOM";
 import { genres } from "./episodes";
 
 const listen = function () {
@@ -13,7 +13,7 @@ const listen = function () {
         const response = await fetch(
           "https://rickandmortyapi.com/api/character/?name=" + searchParams
         );
-        if (response.ok) {
+        if (response.ok && searchParams != "") {
           const data = await response.json();
 
           data.results.forEach((id) => {
@@ -30,43 +30,14 @@ const listen = function () {
             console.log(genreArr);
             console.log(id);
 
-            DOMSelectors.grid.insertAdjacentHTML(
-              "beforeend",
-              `<div class="movie-card">
-          <div class="movie-card-front">
-            <img
-              src=${id.image}
-              alt=""
-              class="poster"
-            />
-          </div>
-          <div class="movie-card-back">
-            <h3 class="movie-card-header">${id.name}</h3>
-            <div class="score-box">
-              <p class="user-score">Status</p>
-              <p class="user-score">${id.status}</p>
-            </div>
-    
-            <div class="release-box">
-              <p class="release-date">Species</p>
-              <p class="release-date">${id.species}</p>
-            </div>
-    
-            <div class="movie-genres"
-              <div class="episode-list">Episode(s)
-              ${genreArr}
-            </div>
-          </div>
-        </div>
-      </div>`
-            );
+            draw_grid(id, genreArr);
           });
         } else {
-          window.alert("There is no character by this name");
-        }
-        if (searchParams == "") {
-          alert("Please enter character name");
-          return false;
+          if (searchParams == "") {
+            alert("Please enter character name");
+          } else {
+            window.alert("There is no character by this name");
+          }
         }
       } catch (error) {
         console.log(error);
