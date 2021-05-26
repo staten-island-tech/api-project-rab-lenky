@@ -1,4 +1,4 @@
-const genres = [
+const episodes = [
   {
     id: "https://rickandmortyapi.com/api/episode/1",
     name: " 1",
@@ -165,4 +165,4 @@ const genres = [
   },
 ];
 
-export { genres };
+export { episodes };

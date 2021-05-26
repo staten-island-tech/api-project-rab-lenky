@@ -4,7 +4,7 @@ const DOMSelectors = {
   searchArea: document.getElementById("search-area"),
 };
 
-const draw_grid = function (id, genreArr) {
+const draw_grid = function (id, episodeArr) {
   DOMSelectors.grid.insertAdjacentHTML(
     "beforeend",
     `<div class="movie-card">
@@ -29,7 +29,7 @@ const draw_grid = function (id, genreArr) {
 
   <div class="movie-genres"
     <div class="episode-list">Episode(s)
-    ${genreArr}
+    ${episodeArr}
   </div>
 </div>
 </div>

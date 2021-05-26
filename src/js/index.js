@@ -1,24 +1,24 @@
 import { DOMSelectors, draw_grid } from "./DOM";
-import { genres } from "./episodes";
+import { episodes } from "./episodes";
 
 const query = async function () {
   try {
     const response = await fetch("https://rickandmortyapi.com/api/character");
     const data = await response.json();
     data.results.forEach((id) => {
-      let genreArr = [];
-      const addGenre = function () {
-        genres.forEach((element) => {
+      let episodeArr = [];
+      const addEpisode = function () {
+        episodes.forEach((element) => {
           if (id.episode.includes(element.id)) {
-            genreArr.push(element.name);
-            return genreArr;
+            episodeArr.push(element.name);
+            return episodeArr;
           }
         });
       };
-      addGenre();
-      console.log(genreArr);
+      addEpisode();
+      console.log(episodeArr);
 
-      draw_grid(id, genreArr);
+      draw_grid(id, episodeArr);
     });
     console.log(data);
   } catch (error) {
