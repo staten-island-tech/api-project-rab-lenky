@@ -10,6 +10,61 @@ body {
   font-weight: 500;
 }
 
+.search-header {
+  font-size: 4rem;
+  margin: 2rem auto 3rem auto;
+  text-align: center;
+}
+
+.search-header-link,
+.search-header-link:visited,
+.search-header-link:link {
+  text-decoration: none;
+  color: lightblue;
+}
+
+.search-header-link:hover {
+  text-decoration: underline;
+}
+
+.search-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 60vw;
+  margin: 2rem auto;
+}
+
+#search-area {
+  width: 30vw;
+  height: 10vh;
+  font-size: 2rem;
+  margin: 3rem auto;
+}
+
+.submit-button {
+  font-size: 2rem;
+}
+
+html,
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-size: 62.5%;
+  color: white;
+  font-family: "Josefin Slab", serif;
+  font-weight: 500;
+}
+
 body {
   background-color: #111;
 }
@@ -43,7 +98,7 @@ body {
           align-items: center;
 }
 
-.movie-card {
+.character-card {
   height: 65vh;
   width: 20vw;
   margin: 0 auto;
@@ -51,13 +106,12 @@ body {
   margin: 2rem auto;
 }
 
-.movie-card-front {
+.character-card-front {
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  /* background-image: url("https://image.tmdb.org/t/p/w300/r7vmZjiyZw9rpJMQJdXpjgiCOk9.jpg"); */
   background-position: center;
   z-index: 3;
   -webkit-transition: all 0.3s;
@@ -69,7 +123,7 @@ body {
   height: 100%;
 }
 
-.movie-card-back {
+.character-card-back {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   position: absolute;
@@ -92,7 +146,7 @@ body {
   height: 100%;
 }
 
-.movie-card-header {
+.character-card-header {
   font-size: 2.4rem;
   text-transform: uppercase;
   margin: 1rem auto;
@@ -104,7 +158,7 @@ body {
   text-align: center;
 }
 
-.movie-genres {
+.character-genres {
   font-size: 1.6rem;
   padding: 1rem 2rem;
   display: -webkit-box;
@@ -120,7 +174,7 @@ body {
           align-items: center;
 }
 
-.movie-genre {
+.character-genre {
   list-style: none;
 }
 
@@ -132,11 +186,11 @@ body {
   font-size: 2rem;
 }
 
-.movie-card:hover .movie-card-front {
+.character-card:hover .character-card-front {
   z-index: 1;
 }
 
-.movie-card:hover .movie-card-back {
+.character-card:hover .character-card-back {
   z-index: 3;
   display: -webkit-box;
   display: -ms-flexbox;

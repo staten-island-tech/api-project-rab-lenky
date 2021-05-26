@@ -7,16 +7,16 @@ const DOMSelectors = {
 const draw_grid = function (id, episodeArr) {
   DOMSelectors.grid.insertAdjacentHTML(
     "beforeend",
-    `<div class="movie-card">
-<div class="movie-card-front">
+    `<div class="character-card">
+<div class="character-card-front">
   <img
     src=${id.image}
     alt=""
     class="poster"
   />
 </div>
-<div class="movie-card-back">
-  <h3 class="movie-card-header">${id.name}</h3>
+<div class="character-card-back">
+  <h3 class="character-card-header">${id.name}</h3>
   <div class="score-box">
     <p class="user-score">Status</p>
     <p class="user-score">${id.status}</p>
@@ -27,7 +27,7 @@ const draw_grid = function (id, episodeArr) {
     <p class="release-date">${id.species}</p>
   </div>
 
-  <div class="movie-genres"
+  <div class="character-genres"
     <div class="episode-list">Episode(s)
     ${episodeArr}
   </div>

@@ -36,14 +36,14 @@ body {
   padding: 3rem auto;
   align-items: center;
 }
-.movie-card {
+.character-card {
   height: 65vh;
   width: 20vw;
   margin: 0 auto;
   position: relative;
   margin: 2rem auto;
 }
-.movie-card-front {
+.character-card-front {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -58,7 +58,7 @@ body {
   width: 100%;
   height: 100%;
 }
-.movie-card-back {
+.character-card-back {
   transition: all 0.3s;
   position: absolute;
   top: 0;
@@ -74,7 +74,7 @@ body {
   width: 100%;
   height: 100%;
 }
-.movie-card-header {
+.character-card-header {
   font-size: 2.4rem;
   text-transform: uppercase;
   margin: 1rem auto;
@@ -86,7 +86,7 @@ body {
   text-align: center;
 }
 
-.movie-genres {
+.character-genres {
   font-size: 1.6rem;
   padding: 1rem 2rem;
   display: flex;
@@ -95,7 +95,7 @@ body {
   flex-wrap: wrap;
   align-items: center;
 }
-.movie-genre {
+.character-genre {
   list-style: none;
 }
 .user-score {
@@ -105,10 +105,10 @@ body {
   font-size: 2rem;
 }
 
-.movie-card:hover .movie-card-front {
+.character-card:hover .character-card-front {
   z-index: 1;
 }
-.movie-card:hover .movie-card-back {
+.character-card:hover .character-card-back {
   z-index: 3;
   display: flex;
 }
